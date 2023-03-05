@@ -2,10 +2,12 @@
 Author: Jason
 Creation Date: 04/03/2023
 
+Referenced from:
 
-jason2022@myfirstproject-364809.iam.gserviceaccount.com
+https://www.youtube.com/watch?v=4ssigWmExak 
 '''
 
+from datetime import date
 import yfinance as yf
 import pandas as pd
 #import plotly.graph_objects as g
@@ -14,9 +16,9 @@ from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient.discovery import build
 
 '''
-share code 1023 will be used as an example
-CIMB Group Holdings Bhd (1023.KL)
-https://finance.yahoo.com/quote/1023.KL?p=1023.KL&.tsrc=fin-srch 
+share code 5258 will be used as an example
+BIMB Berhad (5258.KL)
+https://finance.yahoo.com/quote/5258.KL?p=5258.KL&.tsrc=fin-srch
 '''
 
 def load_to_gsheet(df):
@@ -39,16 +41,19 @@ def load_to_gsheet(df):
     body = {
         'values': values,
     }
-    result = sheet.values().update(spreadsheetId=spreadsheet_id,
-                                    range="yfinance!A1", valueInputOption='USER_ENTERED', body=body).execute() # append
+    result = sheet.values().append(spreadsheetId=spreadsheet_id,
+                                    range="yfinance!A2", valueInputOption='USER_ENTERED', body=body).execute() # append() / update()
 
     print(f'{result.get("updatedCells")} cells updated.')
 
 
 
 def convert_to_df(cheap,middle,expensive):
-    data_dict = {'cheap': cheap, 'middle': middle, 'expensive': expensive}
-    df = pd.DataFrame.from_dict(data_dict, orient='index', columns =['values'])
+    today = date.today().strftime('%Y-%m-%d')
+    data_dict = {'cheap': {'values': cheap, 'ingested_date': today}, 
+                 'middle': {'values': middle, 'ingested_date': today}, 
+                 'expensive': {'values': expensive, 'ingested_date': today}}
+    df = pd.DataFrame.from_dict(data_dict, orient='index')
     load_to_gsheet(df)
     
 
