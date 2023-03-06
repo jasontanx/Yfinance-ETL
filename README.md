@@ -1,5 +1,8 @@
 # Yfinance-ETL
 
+I started this mini project as an inspiration from a youtube video (*link provided below*)on a guide to utilise 'yfinance' module for financial stock analysis. 
+
+
 **Purpose**
 --> To evaluate and analyse share / stock prices
 
