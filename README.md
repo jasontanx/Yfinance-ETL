@@ -4,7 +4,9 @@ I started this mini project as an inspiration from a youtube video (*link provid
 
 
 **Purpose**
+
 --> To evaluate and analyse share / stock prices
+--> To practice ETL / ELT coding
 
 
 **Referece Video**
