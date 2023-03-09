@@ -9,6 +9,15 @@ I started this mini project as an inspiration from a youtube video (*link provid
 
 --> To practice ETL / ELT coding
 
+**What is the 'yfinance' package about?**
+
+⭐ yfinance is a Python package that allows user to download historical market data from the Yahoo Finance platform
+
+⭐ Users could easily get the financial related data such as stock prices from the platform 
+
+⭐ It is built on top of the Yahoo Finance API, providing us the access to retrieve hisotrical data for stocks and other investment related data
+
+⭐ Users could utilise the yfinance package to plot charts, calculate returns, analyse trends etc.
 
 **Referece Video**
 1. https://www.youtube.com/watch?v=4ssigWmExak 
