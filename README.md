@@ -29,6 +29,6 @@ I started this mini project as an inspiration from a youtube video (*link provid
 2. https://www.youtube.com/watch?v=e5W16XIcpsY 
 
 
-**Personal Notes**
-1. to experiment with argparser
-2. add new column --> 'stock code' & 'stock name' for gsheet ingestion
+**Personal Notes - Plans on the Pipeline**
+1. To experiment with argparser
+2. Add new features / columns --> 'stock code' & 'stock name' for gsheet ingestion
