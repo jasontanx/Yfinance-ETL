@@ -2,6 +2,11 @@
 
 I started this mini project as an inspiration from a youtube video (*link provided below*)on a guide to utilise 'yfinance' module for financial stock analysis. 
 
+**Overall ETL pipeline**
+![git_12_yfinance1](https://user-images.githubusercontent.com/116934441/224526236-b9228ddb-8cb7-4b47-bdd8-eec901a8dd65.png)
+
+
+
 
 **Purpose**
 
